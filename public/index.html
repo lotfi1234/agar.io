@@ -9,6 +9,7 @@
   <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
   <script language="javascript" type="text/javascript" src="sketch.js"></script>
   <script language="javascript" type="text/javascript" src="blob.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
     <div id="mainPanel" class="agario-panel" style="opacity: 1;">
@@ -35,78 +36,18 @@
 <option value=":party" data-itr="page_party">Party Mode</option>
 </select>
 </div>
-<div id="locationUnknown">
-
-</div>
 <div class="form-group" id="agario-main-buttons">
 <div class="row">
 <button id="settingsButton" type="button" class="btn btn-info btn-settings"><i class="glyphicon glyphicon-cog"></i>
 </button>
 <button type="submit" class="btn btn-play btn-primary" data-itr="page_play">Play</button>
-<button type="submit" class="btn btn-play-guest btn-success" data-itr="page_play_as_guest">Play as guest</button>
 <button type="submit" class="btn btn-warning btn-login-play" data-itr="page_login_and_play" data-original-title="" title="">Login and play</button>
 </div>
-<div id="socialLoginContainer" style="display:none">
-<div class="row">
-<button id="btnFacebookLogin" class="btn btn-primary btn-login btn-fb">
-<span class="social social-facebook fb-icon"></span>
-<span class="btn-text" data-itr="page_menu_login_facebook">Sign in with Facebook</span>
-</button>
 </div>
-<div class="row">
-<button id="gplusLogin" class="btn btn-primary btn-login btn-gplus">
-<span class="gplus-icon"></span>
-<span class="btn-text" data-itr="page_menu_login_google">Sign in with Google</span>
-</button>
-</div>
-</div>
-</div>
-<div id="settings" class="checkbox" style="display:none">
-<div style="float:left;width:200px">
-<div id="locationKnown"><select id="region" class="form-control" onchange="MC.setRegion($(&quot;#region&quot;).val())" required="">
-<option selected="selected" disabled="disabled" value="" data-itr="page_region_select" style="display: none;"> -- Select a Region -- </option>
-<option value="US-Atlanta" data-itr="page_region_north_america" style="display: block;">North America (1399)</option>
-<option value="BR-Brazil" data-itr="page_region_south_america" style="display: block;">South America (363)</option>
-<option value="EU-London" data-itr="page_region_europe" style="display: block;">Europe (4179)</option>
-<option value="RU-Russia" data-itr="page_region_russia" style="display: block;">Russia (931)</option>
-<option value="TK-Turkey" data-itr="page_region_turkey" style="display: block;">Turkey (1245)</option>
-<option value="JP-Tokyo" data-itr="page_region_east_asia" style="display: block;">East Asia (1185)</option>
-<option value="CN-China" data-itr="page_region_china" style="display: block;">China (336)</option>
-<option value="SG-Singapore" data-itr="page_region_oceania" style="display: block;">Oceania (633)</option>
-</select></div>
-<div id="settingsChoice" style="margin-top:6px">
-<select id="quality" class="form-control" onchange="MC.setQuality($(&quot;#quality&quot;).val())" required="">
-<option disabled="disabled" value="" data-itr="page_graphics_title">-- Graphics Quality --</option>
-<option value="Retina" selected="selected" data-itr="page_graphics_retina">Graphics: Retina</option>
-<option value="High" selected="selected" data-itr="page_graphics_high">Graphics: High</option>
-<option value="Medium" data-itr="page_graphics_medium">Graphics: Medium</option>
-<option value="Low" data-itr="page_graphics_low">Graphics: Low</option>
-<option value="VeryLow" data-itr="page_graphics_very_low">Graphics: Very Low</option>
-</select>
-</div>
-</div>
-<div style="float:right;width:120px">
-<button class="btn btn-warning btn-spectate btn-needs-server" data-itr="page_spectate">Spectate</button>
-<button id="logout" class="btn btn-danger btn-logout" data-itr="page_logout">Logout</button>
-</div>
-<br clear="both">
-<div id="options" style="margin-top:5px;font-size:12px;display:flex;flex-wrap:wrap;justify-content:flex-start">
-<label><input type="checkbox" id="noSkins" style="margin-top:1px"><span data-itr="page_option_no_skins">No skins</span></label>
-<label><input type="checkbox" id="noNames" style="margin-top:1px"><span data-itr="page_option_no_names">No names</span></label>
-<label><input type="checkbox" id="noColors" style="margin-top:1px"><span data-itr="page_option_no_colors">No colors</span></label>
-<label><input type="checkbox" id="showMass" style="margin-top:1px"><span data-itr="page_option_show_mass">Show mass</span></label>
-<label><input type="checkbox" id="darkTheme" style="margin-top:1px"><span data-itr="page_option_dark_theme">Dark theme</span></label>
-<label><input type="checkbox" id="skipStats" style="margin-top:1px"><span data-itr="page_option_skip_stats">Skip stats</span></label>
-<label><input type="checkbox" id="showQuest" style="margin-top:1px"><span data-itr="page_option_show_quest">Show Quest</span></label>
-<label><input type="checkbox" id="playArenaSounds" style="margin-top:1px"><span data-itr="menu_settings_arena_sfx">Game Sounds</span></label>
-<label><input type="checkbox" id="playMenuSounds" style="margin-top:1px"><span data-itr="menu_settings_sfx">Menu Sounds</span></label>
-<label style="" data-original-title="" title=""><input type="checkbox" id="showOnlineStatus" style="margin-top:1px"><span data-itr="page_option_show_online_status">Show Online Status</span></label>
-<label style="display:none"><input type="checkbox" id="targetedAds" style="margin-top:1px"><span data-itr="menu_settings_targeted_advertising">Targeted Advertising</span></label>
 </div>
 <div id="tags-container">
 <span id="user-id-tag">User id: Lotfi_261</span>
 <span id="version-tag">b-6.2.1 m-6.3.1  - 20.2.6 - 3.1.1.1150 - (CFG: 1586)</span>
-</div>
 </div>
 </div>
 <div id="instructions">
