@@ -11,5 +11,112 @@
   <script language="javascript" type="text/javascript" src="blob.js"></script>
   </head>
   <body>
+    <div id="mainPanel" class="agario-panel" style="opacity: 1;">
+<div id="blocker" class="play-blocker" style="display: none;"><span class="connecting-text" style="display:block" data-itr="page_connecting">Connecting</span><img src="img/loader.gif" alt="loader"><span class="connecting-info" style="display:block">Connecting to arena...</span></div>
+<div role="form" novalidate="">
+<div class="form-group clearfix">
+<div style="float:left;margin-left:20px"><h2>Agar.io</h2></div>
+<div style="float:right;margin-top:10px;height:40px">
+<div id="agarYoutube">
+<div id="___ytsubscribe_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 112px; height: 24px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 112px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1535620436949" name="I0_1535620436949" src="https://www.youtube.com/subscribe_embed?usegapi=1&amp;channelid=UCC6hurPo_LxL7C0YFYgYnIw&amp;layout=default&amp;count=default&amp;hl=en-US&amp;origin=http%3A%2F%2Fagar.io&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.fr.Qp8xr2xcyOM.O%2Fam%3DwQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAGLTcCMFHvieBTKfdx71XbaR-TunuB1vlQ%2Fm%3D__features__#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I0_1535620436949&amp;_gfid=I0_1535620436949&amp;parent=http%3A%2F%2Fagar.io&amp;pfname=&amp;rpctoken=80188949" data-gapiattached="true"></iframe></div>
+</div>
+<div class="clearfix">
+<div class="fb-like pull-right fb_iframe_widget" data-href="https://www.facebook.com/playagar.io" data-layout="button" data-action="like" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=677505792353827&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Fplayagar.io&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true"><span style="vertical-align: bottom; width: 96px; height: 20px;"><iframe name="f3713b6a2248ac" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:like Facebook Social Plugin" src="https://www.facebook.com/v2.8/plugins/like.php?action=like&amp;app_id=677505792353827&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2F0P3pVtbsZok.js%3Fversion%3D42%23cb%3Dfa594025b373c%26domain%3Dagar.io%26origin%3Dhttp%253A%252F%252Fagar.io%252Ff8516769d3d0d4%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Fplayagar.io&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true" style="border: none; visibility: visible; width: 96px; height: 20px;" class=""></iframe></span></div>
+</div>
+</div>
+</div>
+<div class="form-group clearfix">
+<input id="nick" class="form-control" placeholder="Nick" maxlength="15" autofocus="">
+<select id="gamemode" class="form-control" required="" data-original-title="" title="">
+<option value=":ffa" data-itr="page_gamemode_ffa">FFA</option>
+<option value=":battleroyale" data-itr="page_gamemode_battle_royale">Battle Royale</option>
+<option value=":teams" data-itr="page_gamemode_teams">Teams</option>
+<option value=":experimental" data-itr="page_gamemode_experimental">Experimental</option>
+<option value=":party" data-itr="page_party">Party Mode</option>
+</select>
+</div>
+<div id="locationUnknown">
+
+</div>
+<div class="form-group" id="agario-main-buttons">
+<div class="row">
+<button id="settingsButton" type="button" class="btn btn-info btn-settings"><i class="glyphicon glyphicon-cog"></i>
+</button>
+<button type="submit" class="btn btn-play btn-primary" data-itr="page_play">Play</button>
+<button type="submit" class="btn btn-play-guest btn-success" data-itr="page_play_as_guest">Play as guest</button>
+<button type="submit" class="btn btn-warning btn-login-play" data-itr="page_login_and_play" data-original-title="" title="">Login and play</button>
+</div>
+<div id="socialLoginContainer" style="display:none">
+<div class="row">
+<button id="btnFacebookLogin" class="btn btn-primary btn-login btn-fb">
+<span class="social social-facebook fb-icon"></span>
+<span class="btn-text" data-itr="page_menu_login_facebook">Sign in with Facebook</span>
+</button>
+</div>
+<div class="row">
+<button id="gplusLogin" class="btn btn-primary btn-login btn-gplus">
+<span class="gplus-icon"></span>
+<span class="btn-text" data-itr="page_menu_login_google">Sign in with Google</span>
+</button>
+</div>
+</div>
+</div>
+<div id="settings" class="checkbox" style="display:none">
+<div style="float:left;width:200px">
+<div id="locationKnown"><select id="region" class="form-control" onchange="MC.setRegion($(&quot;#region&quot;).val())" required="">
+<option selected="selected" disabled="disabled" value="" data-itr="page_region_select" style="display: none;"> -- Select a Region -- </option>
+<option value="US-Atlanta" data-itr="page_region_north_america" style="display: block;">North America (1399)</option>
+<option value="BR-Brazil" data-itr="page_region_south_america" style="display: block;">South America (363)</option>
+<option value="EU-London" data-itr="page_region_europe" style="display: block;">Europe (4179)</option>
+<option value="RU-Russia" data-itr="page_region_russia" style="display: block;">Russia (931)</option>
+<option value="TK-Turkey" data-itr="page_region_turkey" style="display: block;">Turkey (1245)</option>
+<option value="JP-Tokyo" data-itr="page_region_east_asia" style="display: block;">East Asia (1185)</option>
+<option value="CN-China" data-itr="page_region_china" style="display: block;">China (336)</option>
+<option value="SG-Singapore" data-itr="page_region_oceania" style="display: block;">Oceania (633)</option>
+</select></div>
+<div id="settingsChoice" style="margin-top:6px">
+<select id="quality" class="form-control" onchange="MC.setQuality($(&quot;#quality&quot;).val())" required="">
+<option disabled="disabled" value="" data-itr="page_graphics_title">-- Graphics Quality --</option>
+<option value="Retina" selected="selected" data-itr="page_graphics_retina">Graphics: Retina</option>
+<option value="High" selected="selected" data-itr="page_graphics_high">Graphics: High</option>
+<option value="Medium" data-itr="page_graphics_medium">Graphics: Medium</option>
+<option value="Low" data-itr="page_graphics_low">Graphics: Low</option>
+<option value="VeryLow" data-itr="page_graphics_very_low">Graphics: Very Low</option>
+</select>
+</div>
+</div>
+<div style="float:right;width:120px">
+<button class="btn btn-warning btn-spectate btn-needs-server" data-itr="page_spectate">Spectate</button>
+<button id="logout" class="btn btn-danger btn-logout" data-itr="page_logout">Logout</button>
+</div>
+<br clear="both">
+<div id="options" style="margin-top:5px;font-size:12px;display:flex;flex-wrap:wrap;justify-content:flex-start">
+<label><input type="checkbox" id="noSkins" style="margin-top:1px"><span data-itr="page_option_no_skins">No skins</span></label>
+<label><input type="checkbox" id="noNames" style="margin-top:1px"><span data-itr="page_option_no_names">No names</span></label>
+<label><input type="checkbox" id="noColors" style="margin-top:1px"><span data-itr="page_option_no_colors">No colors</span></label>
+<label><input type="checkbox" id="showMass" style="margin-top:1px"><span data-itr="page_option_show_mass">Show mass</span></label>
+<label><input type="checkbox" id="darkTheme" style="margin-top:1px"><span data-itr="page_option_dark_theme">Dark theme</span></label>
+<label><input type="checkbox" id="skipStats" style="margin-top:1px"><span data-itr="page_option_skip_stats">Skip stats</span></label>
+<label><input type="checkbox" id="showQuest" style="margin-top:1px"><span data-itr="page_option_show_quest">Show Quest</span></label>
+<label><input type="checkbox" id="playArenaSounds" style="margin-top:1px"><span data-itr="menu_settings_arena_sfx">Game Sounds</span></label>
+<label><input type="checkbox" id="playMenuSounds" style="margin-top:1px"><span data-itr="menu_settings_sfx">Menu Sounds</span></label>
+<label style="" data-original-title="" title=""><input type="checkbox" id="showOnlineStatus" style="margin-top:1px"><span data-itr="page_option_show_online_status">Show Online Status</span></label>
+<label style="display:none"><input type="checkbox" id="targetedAds" style="margin-top:1px"><span data-itr="menu_settings_targeted_advertising">Targeted Advertising</span></label>
+</div>
+<div id="tags-container">
+<span id="user-id-tag">User id: Lotfi_261</span>
+<span id="version-tag">b-6.2.1 m-6.3.1  - 20.2.6 - 3.1.1.1150 - (CFG: 1586)</span>
+</div>
+</div>
+</div>
+<div id="instructions">
+<hr style="margin-top:10px;margin-bottom:10px">
+<center><span class="text-muted">
+<span data-itr="page_instructions_mouse">Move your mouse to control your cell</span><br>
+<span data-itr="page_instructions_space">Press <b>Space</b> to split</span><br>
+<span data-itr="page_instructions_w">Press <b>W</b> to eject some mass</span><br>
+</span></center>
+</div>
+</div>
   </body>
 </html>
